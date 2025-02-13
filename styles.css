@@ -1,0 +1,172 @@
+/* Стили для фона, текста и анимации */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #ff7f7f, #ffb3b3);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+p {
+    font-size: 1.2rem;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.heart-animation {
+    position: relative;
+    margin-top: 50px;
+    animation: bounce 1.5s infinite;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: #ff3366;
+    position: relative;
+    display: inline-block;
+    transform: rotate(45deg);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ff3366;
+}
+
+.heart:before {
+    top: -50px;
+    left: 0;
+}
+
+.heart:after {
+    left: 50px;
+    top: 0;
+}
+
+.special-message {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    font-weight: bold;
+    animation: fadeIn 3s ease-in-out;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 1rem;
+    animation: fadeIn 4s ease-in-out;
+}
+
+/* Скрываем сообщение */
+#hidden-message {
+    display: none;
+}
+
+/* Стили для вопросов и кнопок */
+.question-section {
+    margin-top: 40px;
+    font-size: 1.5rem;
+}
+
+.answer-buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.yes-button {
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+}
+
+.yes-button:hover {
+    background-color: #45a049;
+}
+
+.no-button {
+    background-color: #ff6666;
+    color: white;
+    border-radius: 5px;
+}
+
+.love-message {
+    display: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff3366;
+    margin-top: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Стили для GIF */
+.gif-section {
+    margin-top: 50px;
+}
+
+.cycys-gif {
+    width: 200px;  /* Установите желаемый размер */
+    height: auto;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
